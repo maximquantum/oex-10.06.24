@@ -1,5 +1,7 @@
 package uitdrukkingen;
 
+import java.util.Objects;
+
 public class VariabeleUitdrukking extends Uitdrukking {
 	
 	private String variabelenaam;
@@ -26,6 +28,16 @@ public class VariabeleUitdrukking extends Uitdrukking {
 		if (variabele == null) { throw new IllegalArgumentException("`variabele` is null"); }
 		
 		return variabele.equals(variabelenaam) ? 1 : 0;
+	}
+
+	@Override
+	public int hashCode() {
+		return variabelenaam.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof VariabeleUitdrukking u && variabelenaam.equals(u.variabelenaam);
 	}
 	
 	

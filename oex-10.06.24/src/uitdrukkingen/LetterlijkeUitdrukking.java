@@ -1,5 +1,7 @@
 package uitdrukkingen;
 
+import java.util.Objects;
+
 public class LetterlijkeUitdrukking extends Uitdrukking {
 	
 	private int waarde;
@@ -24,5 +26,17 @@ public class LetterlijkeUitdrukking extends Uitdrukking {
 		
 		return 0;
 	}
+
+	@Override
+	public int hashCode() {
+		return waarde;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof LetterlijkeUitdrukking u && waarde == u.waarde;
+	}
+	
+	
 
 }

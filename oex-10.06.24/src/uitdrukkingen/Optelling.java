@@ -1,5 +1,7 @@
 package uitdrukkingen;
 
+import java.util.Objects;
+
 public class Optelling extends Uitdrukking {
 
 	private Uitdrukking linkeruitdrukking;
@@ -34,5 +36,15 @@ public class Optelling extends Uitdrukking {
 	public int getAantalVoorkomens(String variabele) {
 		return linkeruitdrukking.getAantalVoorkomens(variabele) + rechteruitdrukking.getAantalVoorkomens(variabele);
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(linkeruitdrukking, rechteruitdrukking);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof Optelling o && linkeruitdrukking.equals(o.linkeruitdrukking) && rechteruitdrukking.equals(o.rechteruitdrukking);
+	}
+	
+	
 	
 }
