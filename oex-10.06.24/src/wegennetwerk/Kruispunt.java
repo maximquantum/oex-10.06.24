@@ -6,21 +6,26 @@ import java.util.Set;
 public class Kruispunt {
 	
 	/**
+	 * @representationObject
 	 * @peerObjects
 	 */
 	Set<Weg> vertrekkendewegen = new HashSet<>();
 	
 	/**
+	 * @representationObject
 	 * @peerObjects
 	 */
 	Set<Weg> aankomendewegen = new HashSet<>();
 	
 	
 	/**
+	 * @post | result != null
+	 * 
+	 * @creates | result
 	 * @peerObjects
 	 */
 	public Set<Weg> getVertrekkendewegen() {
-		return vertrekkendewegen;
+		return Set.copyOf(vertrekkendewegen);
 	}
 
 
@@ -28,7 +33,7 @@ public class Kruispunt {
 	 * @peerObjects
 	 */
 	public Set<Weg> getAankomendewegen() {
-		return aankomendewegen;
+		return Set.copyOf(aankomendewegen);
 	}
 
 
