@@ -75,7 +75,7 @@ public class Weg {
 	 * @post | getEindkruispunt() == null
 	 * @post | old(getEindkruispunt()).getAankomendewegen().equals(LogicalSet.minus(old(getEindkruispunt().getAankomendewegen()), this))
 	 */
-	public void clearEndkruispunt() {
+	public void clearEindkruispunt() {
 		eindkruispunt.aankomendewegen.remove(this);
 		eindkruispunt = null;
 	}
