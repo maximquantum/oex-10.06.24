@@ -15,7 +15,7 @@ public class Weg {
 	/**
 	 * @peerObject 
 	 */
-	public Kruispunt getStartkruispunt() {
+	public Kruispunt getStartkruispunt() { // done 3
 		return startkruispunt;
 	}
 	
@@ -23,7 +23,7 @@ public class Weg {
 	 * @peerObject 
 	 */
 
-	public Kruispunt getEindkruispunt() {
+	public Kruispunt getEindkruispunt() { // done 4
 		return eindkruispunt;
 	}
 
