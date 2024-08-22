@@ -45,9 +45,17 @@ public class Weg {
 		this.startkruispunt = startkruispunt;
 		startkruispunt.vertrekkendewegen.add(this);
 	}
-
+	
+	/**
+	 * @pre | getEindkruispunt() == null
+	 * @pre | eindkruispunt != null
+	 * @mutates_proporties | getEindkruispunt(), eindkruispunt.getAankomendewegen()
+	 * @post | getEindkruispunt() != null
+	 * @post | eindkruispunt.getAankomendewegen().equals(LogicalSet.plus(old(eindkruispunt.getAankomendewegen()), this))
+	 */
 	public void setEindkruispunt(Kruispunt eindkruispunt) {
 		this.eindkruispunt = eindkruispunt;
+		eindkruispunt.aankomendewegen.add(this);
 	}
 	
 	/**
