@@ -25,6 +25,12 @@ public class Optelling extends Uitdrukking {
 		this.rechteruitdrukking = rechteruitdrukking;
 	}
 	
+	/**
+	 * @throws IllegalArgumentException | variabele == null
+	 * 
+	 * @post | result == getLinkeruitdrukking().getAantalVoorkomens(variabele) + getRechteruitdrukking().getAantalVoorkomens(variabele)
+	 */
+	@Override
 	public int getAantalVoorkomens(String variabele) {
 		return linkeruitdrukking.getAantalVoorkomens(variabele) + rechteruitdrukking.getAantalVoorkomens(variabele);
 	}
