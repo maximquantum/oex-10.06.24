@@ -30,6 +30,9 @@ public class Kruispunt {
 
 
 	/**
+	 * @post | result != null
+	 * 
+	 * @creates | result
 	 * @peerObjects
 	 */
 	public Set<Weg> getAankomendewegen() {
