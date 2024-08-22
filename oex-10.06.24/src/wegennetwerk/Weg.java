@@ -70,6 +70,17 @@ public class Weg {
 	}
 	
 	/**
+	 * @pre | getEindkruispunt() != null
+	 * @mutates_proporties | getEndkruispunt(), getEndkruispunt.getAankomendewegen()
+	 * @post | getEindkruispunt() == null
+	 * @post | old(getEindkruispunt()).getAankomendewegen().equals(LogicalSet.minus(old(getEindkruispunt().getAankomendewegen()), this))
+	 */
+	public void clearEndkruispunt() {
+		eindkruispunt.aankomendewegen.remove(this);
+		eindkruispunt = null;
+	}
+	
+	/**
 	 * @post | getStartkruispunt() == null
 	 * @post | getEindkruispunt() == null
 	 */
