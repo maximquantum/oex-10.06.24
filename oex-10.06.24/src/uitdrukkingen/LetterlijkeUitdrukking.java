@@ -13,6 +13,16 @@ public class LetterlijkeUitdrukking extends Uitdrukking {
 		this.waarde = waarde;
 	}
 	
-	
+	/**
+	 * @throws IllegalArgumentException | variabele == null
+	 * 
+	 * @post | result == 0
+	 */
+	@Override
+	public int getAantalVoorkomens(String variabele) {
+		if (variabele == null) { throw new IllegalArgumentException("`variabele` is null"); }
+		
+		return 0;
+	}
 
 }

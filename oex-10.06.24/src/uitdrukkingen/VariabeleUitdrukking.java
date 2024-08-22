@@ -16,6 +16,18 @@ public class VariabeleUitdrukking extends Uitdrukking {
 		this.variabelenaam = variabelenaam;
 	}
 	
-
+	/**
+	 * @throws IllegalArgumentException | variabele == null
+	 * 
+	 * @post | result == (variabele.equals(getVariabelenaam()) ? 1 : 0)
+	 */
+	@Override
+	public int getAantalVoorkomens(String variabele) {
+		if (variabele == null) { throw new IllegalArgumentException("`variabele` is null"); }
+		
+		return variabele.equals(variabelenaam) ? 1 : 0;
+	}
+	
+	
 	
 }

@@ -1,5 +1,6 @@
 package uitdrukkingen;
 
-public class Uitdrukking {
-
+public abstract class Uitdrukking {
+	
+	public abstract int getAantalVoorkomens(String variabele);
 }

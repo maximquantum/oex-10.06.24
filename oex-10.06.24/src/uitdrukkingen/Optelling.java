@@ -25,6 +25,8 @@ public class Optelling extends Uitdrukking {
 		this.rechteruitdrukking = rechteruitdrukking;
 	}
 	
-	
+	public int getAantalVoorkomens(String variabele) {
+		return linkeruitdrukking.getAantalVoorkomens(variabele) + rechteruitdrukking.getAantalVoorkomens(variabele);
+	}
 	
 }
